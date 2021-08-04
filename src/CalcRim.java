@@ -52,62 +52,62 @@ public class CalcRim {
     }
 
     String arabToRim(int number) { //переводим целочисленное число в римское представление
-        String str = "";
+        StringBuilder strBuilder = new StringBuilder();
 
         while (number >= 1000) {
-            str += "M";
+            strBuilder.append("M");
             number -= 1000;
         }
         while (number >= 900) {
-            str += "CM";
+            strBuilder.append("CM");
             number -= 900;
         }
         while (number >= 500) {
-            str += "D";
+            strBuilder.append("D");
             number -= 500;
         }
         while (number >= 400) {
-            str += "CD";
+            strBuilder.append("CD");
             number -= 400;
         }
         while (number >= 100) {
-            str += "C";
+            strBuilder.append("C");
             number -= 100;
         }
         while (number >= 90) {
-            str += "XC";
+            strBuilder.append("XC");
             number -= 90;
         }
         while (number >= 50) {
-            str += "L";
+            strBuilder.append("L");
             number -= 50;
         }
         while (number >= 40) {
-            str += "XL";
+            strBuilder.append("XL");
             number -= 40;
         }
         while (number >= 10) {
-            str += "X";
+            strBuilder.append("X");
             number -= 10;
         }
         while (number >= 9) {
-            str += "IX";
+            strBuilder.append("IX");
             number -= 9;
         }
         while (number >= 5) {
-            str += "V";
+            strBuilder.append("V");
             number -= 5;
         }
         while (number >= 4) {
-            str += "IV";
+            strBuilder.append("IV");
             number -= 4;
         }
         while (number >= 1) {
-            str += "I";
+            strBuilder.append("I");
             number -= 1;
         }
 
-        return str;
+        return strBuilder.toString();
     }
 
     public String getResult() {
